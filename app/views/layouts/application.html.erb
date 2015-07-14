@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TheBinnacle</title>
+  <title>goBinnacle</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -24,22 +24,23 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-center">
-        <li class="dropdown">
+        <li class="dropdown" class="active">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Stories<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Around Town</a></li>
-            <li><a href="#">Breaking News</a></li>
-            <li><a href="#">Business</a></li>
-            <li><a href="#">Deck</a></li>
-            <li><a href="#">Engine</a></li>
-            <li><a href="#">Serious</a></li>
+            <li><a href="/view_story/around_town">Around Town</a></li>
+            <li><a href="/view_story/breaking_news">Breaking News</a></li>
+            <li><a href="/view_story/buisness">Business</a></li>
+            <li><a href="/view_story/deck">Deck</a></li>
+            <li><a href="/view_story/engine">Engine</a></li>
+            <li><a href="/view_story/serious">Serious</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Associated Students</a></li>
+            <li><a href="/view_story/associated_students">Associated Students</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Local News</a></li>
+            <li><a href="/view_story/local_news">Local News</a></li>
           </ul>
         </li>
-        <li class="active"><a href="#">About goBinnacle <!-- <span class="sr-only">(current)</span> --></a></li>
+
+        <li class=""><a href="/about/about">About goBinnacle</a></li>
         <li><a href="#">Submit</a></li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
@@ -56,5 +57,21 @@
 
 <%= yield %>
 
+<footer>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <%= image_tag "logo.png" %>
+      </a>
+      <p class="navbar-text">Powered by <a href="http://www.asmaritime.org/">ASCMA</a> and <a href="https://alaskanbeer.com/">Alaskan Amber</a></p>
+      <a class="navbar-right" href="https://www.facebook.com/cmabinnacle"><%= image_tag("social-facebook.png", size: "40x40", alt: "goBinnacle Facebook") %></a>
+      <a class="navbar-right" href="https://www.facebook.com/cmabinnacle"><%= image_tag("social-twitter.png", size: "40x40", alt: "goBinnacle Twitter") %></a>
+    </div>
+  </div>
+</nav>
+
+</nav>
+</footer>
 </body>
 </html>

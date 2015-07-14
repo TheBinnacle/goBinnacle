@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150713023151) do
+ActiveRecord::Schema.define(version: 20150714200601) do
 
   create_table "abouts", force: :cascade do |t|
     t.text     "content"
@@ -37,6 +37,15 @@ ActiveRecord::Schema.define(version: 20150713023151) do
     t.string   "current_login_ip"
     t.string   "last_login_ip"
     t.string   "time_zone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sidebars", force: :cascade do |t|
+    t.string   "headline"
+    t.text     "info"
+    t.string   "image_url"
+    t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

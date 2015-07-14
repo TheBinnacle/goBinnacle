@@ -2,10 +2,19 @@ Rails.application.routes.draw do
 
   root 'view_story#index'
 
-
+  get "/about/about"
+  get "/view_story/around_town"
+  get "/view_story/associated_students"
+  get "/view_story/breaking_news"
+  get "/view_story/buisness"
+  get "/view_story/deck"
+  get "/view_story/engine"
+  get "/view_story/local_news"
+  get "/view_story/serious"
 
 	#Casein routes
 	namespace :casein do
+		resources :sidebars
 		resources :abouts
 		resources :stories
 	end

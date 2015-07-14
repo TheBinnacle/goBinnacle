@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711070310) do
+ActiveRecord::Schema.define(version: 20150713023151) do
+
+  create_table "abouts", force: :cascade do |t|
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "casein_admin_users", force: :cascade do |t|
     t.string   "login",                           null: false
@@ -33,6 +39,25 @@ ActiveRecord::Schema.define(version: 20150711070310) do
     t.string   "time_zone"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "stories", force: :cascade do |t|
+    t.string "category"
+    t.string "title"
+    t.string "author"
+    t.date   "date"
+    t.text   "story"
+    t.string "image"
+  end
+
+  create_table "submits", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "view_stories", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

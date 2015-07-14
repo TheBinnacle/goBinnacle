@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
+  root 'view_story#index'
+
+
+
 	#Casein routes
 	namespace :casein do
+		resources :abouts
 		resources :stories
 	end
 

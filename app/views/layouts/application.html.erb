@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>goBinnacle</title>
+  <title><%= yield(:title) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -18,7 +18,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><%= image_tag "logo.png" %></a>
+      <a class="navbar-brand" href="http://localhost:3000"><%= image_tag "logo.png" %></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -27,27 +27,28 @@
         <li class="dropdown" class="active">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Stories<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/view_story/around_town">Around Town</a></li>
-            <li><a href="/view_story/breaking_news">Breaking News</a></li>
-            <li><a href="/view_story/buisness">Business</a></li>
-            <li><a href="/view_story/deck">Deck</a></li>
-            <li><a href="/view_story/engine">Engine</a></li>
-            <li><a href="/view_story/serious">Serious</a></li>
+            <li><%= link_to 'Around Town', around_town_path %></li>
+            <li><%= link_to 'Breaking News', breaking_news_path %></li>
+            <li><%= link_to 'Business', buisness_path %></li>
+            <li><%= link_to 'Deck', deck_path %></li>
+            <li><%= link_to 'Engine', engine_path %></li>
+            <li><%= link_to 'Serious', serious_path %></li>
             <li role="separator" class="divider"></li>
-            <li><a href="/view_story/associated_students">Associated Students</a></li>
+            <li><%= link_to'Associated Students', associated_students_path %></li>
             <li role="separator" class="divider"></li>
-            <li><a href="/view_story/local_news">Local News</a></li>
+            <li><%= link_to 'Local News', local_news_path %></a></li>
           </ul>
         </li>
 
-        <li class=""><a href="/about/about">About goBinnacle</a></li>
-        <li><a href="#">Submit</a></li>
+        <li><%= link_to 'About goBinnacle', about_path %></li>
+        <li><%= link_to 'Write a Letter to the Editor', letters_path %></li>
       </ul>
-      <form class="navbar-form navbar-right" role="search">
+      
+<!--       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default">Submit</button> -->
       </form>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -61,12 +62,14 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        <%= image_tag "logo.png" %>
-      </a>
-      <p class="navbar-text">Powered by <a href="http://www.asmaritime.org/">ASCMA</a> and <a href="https://alaskanbeer.com/">Alaskan Amber</a></p>
-      <a class="navbar-right" href="https://www.facebook.com/cmabinnacle"><%= image_tag("social-facebook.png", size: "40x40", alt: "goBinnacle Facebook") %></a>
-      <a class="navbar-right" href="https://www.facebook.com/cmabinnacle"><%= image_tag("social-twitter.png", size: "40x40", alt: "goBinnacle Twitter") %></a>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-center">
+        <li><p class="navbar-text">Powered by <a href="http://www.asmaritime.org/">ASCMA</a> &amp; <a href="http://www.csum.edu">Cal Maritime</a>.</a><br>Views expressed by goBinnacle are not reflective of the CSU, CMA, or ASCMA.<br>
+        Copyright 2015 ASCMA and Nicholas Seferos</p></li>
+        <li><a class="navbar-right" href="https://www.facebook.com/cmabinnacle"><%= image_tag("social-facebook.png", size: "40x40", alt: "goBinnacle Facebook") %></a></li>
+        <li><a class="navbar-right" href="https://www.twitter.com"><%= image_tag("social-twitter.png", size: "40x40", alt: "goBinnacle Twitter") %></a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>

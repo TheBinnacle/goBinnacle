@@ -1,0 +1,27 @@
+<!--This is where the about and staff page will go -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10 col-md-">
+    <h1>About</h1> <!-- About content inserted here -->
+      <% @abouts.each do |about| %>
+        <%== about.content %>
+      <% end %>
+
+      <br><br><br>
+        <center>
+          <div class="btn-group" role="group"> <!-- Button Group -->
+            <button type="button" class="btn btn-default">Submit an Article</button>
+            <button type="button" class="btn btn-default">Apply to Write</button>
+          </div>
+        </center>
+      <br><br>
+    </div>
+    <div class="col-sm-10 col-md-10">
+      <h1>Staff</h1>
+      <div class="continer-fluid"><!-- Start staff section -->
+        
+ <!-- End Staff section -->
+      </div>
+    </div>
+  </div>
+</div>

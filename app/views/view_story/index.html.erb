@@ -1,0 +1,42 @@
+<% content_for :title, "goBinnacle | Maritime's Number One Publication" %>
+
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<div class="container">
+<div class="jumbotron">
+  <h1>Hey there Maritime.</h1>
+  <p>How's a goin? We've gone digital. It's pretty exciting, I know. And if you're wondering what I think you are, the answer is yes. This means more content, more frequently. </p>
+  <p><a class="btn btn-primary btn-lg" href="/about" role="button">Learn more</a></p>
+</div></div>
+
+<div class="container-fluid">
+<% @stories.each do |story| %>
+<div class="row-fluid">
+  <div class="col-sm-10 col-md-9">
+    <div class="thumbnail">
+      <%== image_tag(story.image) %>
+      <div class="caption">
+        <h3><%== story.title %></h3>
+        <h5>By <%== story.author %> on <%== story.date.strftime("%B %e, %Y") %></h5>
+        <p><%== story.story.split[0...50].join(" ") %>...</p>
+        <p><%= link_to 'Read More', story_path(story), :class => "btn btn-primary", :role => "button" %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+
+<div class="span 4" class="visible-desktop">
+	<h3>Corps, AS and Housing News</h3>
+  <% @sidebars.each do |sb| %>
+  <h3><%= sb.headline %></h3>
+  <p>
+    <%= sb.info %>
+    <%== sb.link %>
+  </p>
+  <% end %>
+</div>
+</div>
+
+

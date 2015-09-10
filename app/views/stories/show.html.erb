@@ -1,0 +1,17 @@
+<% content_for :title, @story.title %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-4 col-md-6">
+    	<h1><%== @story.title %></h1>
+      <h3><small>By <%== @story.author %> on <%== @story.date.strftime("%B %e, %Y") %></small></h3>
+    </div>
+    <div class="col-xs-8 col-md-6">
+      <%= image_tag(@story.image, :size => "180X100", :crop => :fill) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-10">
+    	<p class="text-centered"><%== @story.story %></p>
+    </div>
+  </div>
+</div>

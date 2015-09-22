@@ -1,18 +1,34 @@
 <div align="center">
 	<h3>
-		Write a letter to the editor.
+		Send a letter to the editor or submit a story.
 	</h3>
-
-	<%= simple_form_for @letter, :html => {:class => 'form-horizontal'} do |f| %>
-		<%= f.input :name, :required => true %>
-    <%= f.input :email, :required => true %>
-    <%= f.input :letter, :as => :text, :required => true %>
-    <div class="hidden">
-      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+  <p>
+    We appreaciate your feedback and story ideas.
+  </p>
+<div class="container">
+  <div class="row">
+  	<%= simple_form_for @letter, :html => {:class => 'form-horizontal'} do |f| %>
+  		<div class="col-md-6">
+        <%= f.input :name, :required => true %>
+      </div>
+      <div class="col-md-6">
+        <%= f.input :email, :required => true %>
+      </div>
     </div>
-    <div>
+    <div class="row">
+      <div class="col-md-12">
+        <%= f.input :letter, :as => :text, :required => true %>
+      </div>
+    </div>
+      <div class="hidden">
+        <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+      </div>
+      <div>
+        <br>
+        <%= f.button :submit, 'Send Letter', :class => "btn btn-primary" %>
+      </div>
+      <% end %>
       <br>
-      <%= f.button :submit, 'Send Letter', :class => "btn btn-primary" %>
     </div>
-    <% end %>
+  </div>
 </div>

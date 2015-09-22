@@ -19,7 +19,7 @@
       <div class="caption">
         <h3><%== story.title %></h3>
         <h5>By <%== story.author %> on <%== story.date.strftime("%B %e, %Y") %></h5>
-        <p><%== story.story.split[0...50].join(" ") %>...</p>
+        <p><%== simple_format(story.story.split[0...50].join(" ")) %></p>
         <p><%= link_to 'Read More', story_path(story), :class => "btn btn-primary", :role => "button" %></p>
       </div>
     </div>

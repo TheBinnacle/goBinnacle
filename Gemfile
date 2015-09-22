@@ -29,6 +29,9 @@ gem 'brakeman'
 gem 'simple_form'
 gem 'mail_form'
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -42,7 +45,15 @@ gem 'acts-as-taggable-on', '~> 3.4'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
+  gem 'minitest-reporters'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'konacha'
+  gem 'poltergeist'
+  gem 'rb-fsevent'
+  gem 'rspec-rails'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 

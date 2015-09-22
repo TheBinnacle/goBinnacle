@@ -1,4 +1,4 @@
-require 'MailForm'
+require 'Mail_Form'
 class Letter < MailForm::Base
 	attribute :name,  :validate => true
 	attribute :email, :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i

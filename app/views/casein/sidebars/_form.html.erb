@@ -6,7 +6,8 @@
 		<%= casein_text_field f, f.object, :headline %>
 	</div>
 	<div class="col-lg-6">
-		<%= casein_text_field f, f.object, :info %>
+
+		<%= f.cktext_area :info, rows: 8 %>
 	</div>
 </div>
 

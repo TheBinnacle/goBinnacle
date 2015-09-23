@@ -30,9 +30,9 @@
 <div class="span 4" class="visible-desktop">
 	<h3>Corps, AS and Housing News</h3>
   <% @sidebars.each do |sb| %>
-  <h3><%= sb.headline %></h3>
+  <h3><%== sb.headline %></h3>
   <p>
-    <%= sb.info %>
+    <%== sb.info %>
     <%== sb.link %>
   </p>
   <% end %>

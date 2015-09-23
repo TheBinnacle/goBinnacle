@@ -8,17 +8,17 @@ module Casein
     # before_filter :needs_admin_or_current_user, :only => [:action1, :action2]
   
     def index
-      @casein_page_title = 'Articles'
-  		@stories = Story.order(sort_order(:category)).paginate :page => params[:page]
+      @casein_page_title = 'Stories'
+  		@stories = Story.order(sort_order(:tag)).paginate :page => params[:page]
     end
   
     def show
-      @casein_page_title = 'View article'
+      @casein_page_title = 'View story'
       @story = Story.find params[:id]
     end
   
     def new
-      @casein_page_title = 'Add a new article'
+      @casein_page_title = 'Add a new story'
     	@story = Story.new
     end
 
@@ -26,10 +26,10 @@ module Casein
       @story = Story.new story_params
     
       if @story.save
-        flash[:notice] = 'Well done. The "man" thanks you.'
+        flash[:notice] = 'Story created'
         redirect_to casein_stories_path
       else
-        flash.now[:warning] = 'ATTENTION: I screwed something up and broke it. Have a nice day.'
+        flash.now[:warning] = 'There were problems when trying to create a new story'
         render :action => :new
       end
     end
@@ -40,10 +40,10 @@ module Casein
       @story = Story.find params[:id]
     
       if @story.update_attributes story_params
-        flash[:notice] = 'Your mistake has been corected, story updated.'
+        flash[:notice] = 'Story has been updated'
         redirect_to casein_stories_path
       else
-        flash.now[:warning] = 'ATTENTION: Due to the nature of CMA, this could not be updated. Have a nice day. #maritime.'
+        flash.now[:warning] = 'There were problems when trying to update this story'
         render :action => :show
       end
     end
@@ -59,7 +59,7 @@ module Casein
     private
       
       def story_params
-        params.require(:story).permit(:category, :title, :author, :date, :story, :image)
+        params.require(:story).permit(:tag, :title, :author, :date, :story, :image)
       end
 
   end

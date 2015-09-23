@@ -1,8 +1,6 @@
-<script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
-
 <div class="row">
 	<div class="col-lg-6">
-		<%= casein_text_field f, f.object, :category %>
+		<%= casein_text_field f, f.object, :tag %>
 	</div>
 	<div class="col-lg-6">
 		<%= casein_text_field f, f.object, :title %>
@@ -18,19 +16,19 @@
 	</div>
 </div>
 
-<div class="row">
-	<div class="col-lg-12">
-    <%= f.label 'Story' %>
-    <%= f.cktext_area :story, rows: 8 %>
-	</div>
-</div>
-<div class="row">
-	<div class="col-lg-6">
-		<%= casein_text_field f, f.object, :image %>
-	</div>
-	<div class="col-lg-6">
-    <h5>Code is valid in stories.</h5>
-    <p>To add custom HTML, CSS or JS, click the source button in the top left. Here you can add custom code.</p>
-	<%= hidden_field(:story_id, :tag_list) %>
-	</div>
+<div class="row"> 
+	<div class="col-lg-12"> 
+		<%= f.label 'Story' %> 
+		<%= f.cktext_area :story, rows: 8 %> 
+	</div> 
+</div> 
+<div class="row"> 
+	<div class="col-lg-6"> 
+		<%= casein_text_field f, f.object, :image %> 
+	</div> 
+	<div class="col-lg-6"> 
+		<h5>Code is valid in stories.</h5> 
+		<p>To add custom HTML, CSS or JS, click the source button in the top left. Here you can add custom code.</p> 
+		<%= hidden_field(:story_id, :tag_list) %> 
+	</div> 
 </div>

@@ -21,9 +21,9 @@ resources :view_story
   resources "letters", only: [:new, :create]
 
 	namespace :casein do
+		resources :stories
 		resources :writers, :only => [:index, :show]
 		resources :sidebars
 		resources :abouts
-		resources :stories
 	end
 end

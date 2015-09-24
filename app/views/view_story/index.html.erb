@@ -27,6 +27,7 @@
 </div>
 <% end %>
 
+
 <div class="span 4" class="visible-desktop">
 	<h3>Corps, AS and Housing News</h3>
   <% @sidebars.each do |sb| %>
@@ -38,5 +39,6 @@
   <% end %>
 </div>
 </div>
-
-
+<div class="container">
+<%= will_paginate @stories %>
+</div>

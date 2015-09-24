@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'casein', '~>5.1.1'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~>3.3.3'
 gem 'brakeman'
 gem 'simple_form'
 gem 'mail_form'
@@ -32,7 +32,7 @@ gem 'acts-as-taggable-on', '~> 3.4'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
-
+gem 'will_paginate', '~> 3.0.6'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

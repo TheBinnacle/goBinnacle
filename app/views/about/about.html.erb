@@ -1,13 +1,14 @@
 <!--This is where the about and staff page will go -->
 <div class="container">
   <div class="row">
-    <div class="col-sm-10 col-md-">
+    <div class="col-sm-10 ">
     <h1>About</h1> <!-- About content inserted here -->
-      <% @abouts.each do |about| %>
-        <%== about.content %>
-      <% end %>
-
-      <br><br><br>
+      <div class="well">
+        <% @abouts.each do |about| %>
+          <%== about.content %>
+        <% end %>
+      </div>
+      <br><br>
         <center>
           <div class="btn-group" role="group"> <!-- Button Group -->
             <%= button_to'Send a Letter to the Editor', letters_path, :type => "button", :class => "btn btn-default" %>

@@ -1,3 +1,4 @@
+<% #title "Letter's to the Editor" %>
 <div align="center">
 	<h3>
 		Send a letter to the editor or submit a story.
@@ -5,19 +6,23 @@
   <p>
     We appreaciate your feedback and story ideas.
   </p>
-<div class="container">
+  <br>
+  <br>
+<div class="container well">
   <div class="row">
-  	<%= simple_form_for @letter, :html => {:class => 'form-horizontal'} do |f| %>
-  		<div class="col-md-6">
-        <%= f.input :name, :required => true %>
+  	<%= simple_form_for @letter, :html => {:class => 'form-inline'} do |f| %>
+  		<div class="form-group">
+        <%= f.input :name, :required => true, :placeholder => 'Name', :label => false %>
       </div>
-      <div class="col-md-6">
-        <%= f.input :email, :required => true %>
+      <div class="form-group">
+        <%= f.input :email, :required => true, :placeholder => 'email@example.com', :label => false %>
       </div>
     </div>
+    <br>
     <div class="row">
-      <div class="col-md-12">
-        <%= f.input :letter, :as => :text, :required => true %>
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <%= f.input :letter, :as => :text, :required => true, :label => false, :placeholder => 'Enter your letter to the editor or article submission here.' %>
       </div>
     </div>
       <div class="hidden">
@@ -25,10 +30,22 @@
       </div>
       <div>
         <br>
-        <%= f.button :submit, 'Send Letter', :class => "btn btn-primary" %>
+        <%= f.button :submit, 'Send Letter', :class => "btn btn-default" %>
       </div>
       <% end %>
-      <br>
+      
     </div>
   </div>
+</div>
+<div class="container">
+ <center>
+  <h3>
+    Enjoy this video while you write your letter.
+  </h3>
+  <br>
+  <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tpDXfs6I1Ck" frameborder="0" allowfullscreen></iframe>
+  </div>
+  </center>
+  <br>
 </div>

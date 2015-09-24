@@ -163,6 +163,9 @@ GEM
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
+    passenger (5.0.18)
+      rack
+      rake (>= 0.8.1)
     poltergeist (1.6.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -296,6 +299,7 @@ DEPENDENCIES
   mail_form
   mini_magick
   minitest-reporters
+  passenger
   poltergeist
   rails (= 4.2.3)
   rb-fsevent

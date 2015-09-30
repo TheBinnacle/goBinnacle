@@ -14,7 +14,7 @@ resources :view_story
   get "/engine" => 'view_story#engine'
   get "/local_news" => 'view_story#local_news'
   get "/serious" => 'view_story#serious'
-  
+  get "/watchbills" => 'view_story#watchbills'
   resources :stories
 
   match '/letters', to: 'letters#new', via: 'get'

@@ -14,13 +14,15 @@
 <% @stories.each do |story| %>
 <div class="row-fluid">
   <div class="col-sm-10 col-md-9">
-    <div class="thumbnail">
+    <div class="">
       <%== image_tag(story.image) %>
-      <div class="caption">
-        <h3><%== story.title %></h3>
+      <div class="">
+        <h3><%== link_to "#{story.title}", story_path(story) %></h3>
         <h5>By <%== story.author %> on <%== story.date.strftime("%B %e, %Y") %></h5>
         <p><%== simple_format(story.story.split[0...50].join(" ")) %></p>
-        <p><%= link_to 'Read More', story_path(story), :class => "btn btn-primary", :role => "button" %></p>
+        <p><%= link_to 'Read More', story_path(story), :class => "btn btn-default", :role => "button" %></p>
+        <br>
+        <hr>
       </div>
     </div>
   </div>

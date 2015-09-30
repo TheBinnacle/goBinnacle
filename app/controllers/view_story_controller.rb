@@ -13,4 +13,8 @@ class ViewStoryController < ApplicationController
   def prev
     Story.where("id > ?", id).limit(1).first
   end
+
+  def watchbills
+    
+  end
 end

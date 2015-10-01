@@ -1,8 +1,8 @@
 # REQUIRED: The name of your application
-app_name: your_app_name
+app_name: thebinnacle
 
 # REQUIRED: The system user to run your app servers as
-app_user: app
+app_user: nick
 
 # REQUIRED: Notification emails (e.g. monit) get sent to this address
 #
@@ -54,13 +54,13 @@ cloud_providers:
     # us-west-1      # US West (Northern California) Region
     # us-west-2      # US West (Oregon) Region
     #
-    region: us-east-1
+    region: us-west-2
 
     # REQUIRED The amazon keys and account ID (digits only, no dashes) used to access the AWS API
     #
-    access_key: XXX
-    secret_access_key: YYY
-    account: 'ZZZ'
+    access_key: AKIAJMO54TPQJDOGOKYQ
+    secret_access_key: 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
+    account: '850892832483'
 
     # REQUIRED:  The name of the amazon keypair and location of its private key
     #
@@ -86,7 +86,7 @@ cloud_providers:
     # Ubuntu 14.04.1 Trusty instance-store 64-bit: ami-92f569fa
     #
     # m1.small or m1.large or m1.xlarge
-    image_type: c1.medium
+    image_type: t2.micro
     image_id: ami-92f569fa
 
     # OPTIONAL: Provide fog-specific options directly.  This should only be used if you need a special setting that

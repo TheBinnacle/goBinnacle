@@ -20,7 +20,7 @@ gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'will_paginate', '~> 3.0.6'
-gem 'puma'
+gem 'passenger'
 group :assets do
   gem 'therubyracer', :platform => :ruby
 end

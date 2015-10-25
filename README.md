@@ -13,7 +13,16 @@ This version utilizes sqlite.
 
 Planned changes for version 2.0.
 - Migrate to postgres
-- Separate client and API
+- Separate client and API/ NEW BACKEND!!!!
+- Better cacheing
+- Application to write
+- Headline tickers?
+- Link to staff (profile with stories)
+- Related stories
+- FROALA instead of ckeditor
+- Tagging/Categories
+- Facebook integration
+- Previous issues section
 
 This is a news site for the print magazine
 'The Binnacle'

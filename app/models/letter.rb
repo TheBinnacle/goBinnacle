@@ -8,8 +8,8 @@ class Letter < MailForm::Base
 	def headers
 		{
       :subject => "Letter to the Editor",
-      :to => "nick.seferos@gmail.com",
-      :from => %("#{name}" <#{email}>)
+      :to => "editor@gobinnacle.com",
+      :from => %("#{name}" <editor@gobinnacle.com>)
 		}
 	end
 end

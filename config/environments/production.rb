@@ -15,11 +15,11 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      :address => "email-smtp.us-west-2.amazonaws.com",
-      :port => 587, # Port 25 is throttled on AWS
-      :user_name => "AKIAJVD4LBWCDY7ALPVA", # Your SMTP user here.
-      :password => "AvIHC8XETMcSq6eWzw1hi8ih6O7nynjCfbSizhtxSKav", # Your SMTP password here.
-      :authentication => :login,
-      :enable_starttls_auto => true
+    address: ENV['email-smtp.us-west-2.amazonaws.com'],
+    authentication: :login,
+    domain: 'gobinnacle.com',
+    password: ENV['ApI3ixIs4EQJHBOyIhZUwcA8Q24M/9tCTlrJWIVSghrz'],
+    port: 25,
+    user_name: ENV['AKIAISKYPVNWF33MORAQ']
   }
 end
